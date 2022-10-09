@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Parallax Scrolling Website | Vanilla Javascript</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Gilang</a>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Work</a></li>
+            <li><a href="https://gryzlegrizz.github.io/personal-project-contact/">Contact</a></li>
+        </ul>
+    </header>
+    <section>
+        <img src="stars.png" id="stars">
+        <img src="moon.png" id="moon">
+        <img src="mountains_behind.png" id="mountains_behind">
+        <h2 id="text">WKWKWK</h2>
+        <a href="#sec" id="btn">Jelajahi</a>
+        <img src="mountains_front.png" id="mountains_front">
+    </section>
+    <div class="sec" id="sec">
+        <h2>Tau Gak Sih</h2>
+        <p>Jadi Website ini tuh tercipta karena hasil gabut ya kawan-kawan.<br><br>        Jadi sekalian gabut sekalian belajar bikin ginian, itung-itung ngasah skill 1 skill 2 skill 3 baru ulti!<br><br>
+        Yauda gitu aja sih, gaada lagi yang mau diomongin. kesan pesan bikin web ini tuh seru banget kalian harus coba juga!!!!!
+        <br><br>
+        biar banyak deh aku tambahin ini<br><br>
+        We're no strangers to love <br>
+        You know the rules and so do I (do I) <br>
+        A full commitment's what I'm thinking of <br>
+        You wouldn't get this from any other guy <br><br>
+        I just wanna tell you how I'm feeling <br>
+        Gotta make you understand <br><br>
+        Never gonna give you up <br>
+        Never gonna let you down <br>
+        Never gonna run around and desert you <br>
+        Never gonna make you cry <br>
+        Never gonna say goodbye <br>
+        Never gonna tell a lie and hurt you <br><br>
+        <img src="never-gonna.gif"> <br>
+        We've known each other for so long <br>
+        Your heart's been aching, but you're too shy to say it (say it) <br>
+        Inside, we both know what's been going on (going on) <br>
+        We know the game and we're gonna play it <br><br>
+        And if you ask me how I'm feeling <br>
+        Don't tell me you're too blind to see <br><br>
+        Never gonna give you up <br>
+        Never gonna let you down <br>
+        Never gonna run around and desert you <br>
+        Never gonna make you cry <br>
+        Never gonna say goodbye <br>
+        Never gonna tell a lie and hurt you <br><br>
+        <img src="never-gonna.gif"> <br>
+        Never gonna give you up <br>
+        Never gonna let you down <br>
+        Never gonna run around and desert you <br>
+        Never gonna make you cry <br>
+        Never gonna say goodbye <br>
+        Never gonna tell a lie and hurt you <br><br>
+        <img src="never-gonna.gif"> <br>
+        We've known each other for so long <br>
+        Your heart's been aching, but you're too shy to say it (to say it) <br>
+        Inside, we both know what's been going on (going on) <br>
+        We know the game and we're gonna play it <br><br>
+        I just wanna tell you how I'm feeling <br>
+        Gotta make you understand <br><br>
+        Never gonna give you up <br>
+        Never gonna let you down <br>
+        Never gonna run around and desert you <br>
+        Never gonna make you cry <br>
+        Never gonna say goodbye <br>
+        Never gonna tell a lie and hurt you <br><br>
+        <img src="never-gonna.gif"> <br>
+        Never gonna give you up <br>
+        Never gonna let you down <br>
+        Never gonna run around and desert you <br>
+        Never gonna make you cry <br>
+        Never gonna say goodbye <br>
+        Never gonna tell a lie and hurt you <br><br>
+        <img src="never-gonna.gif"> <br>
+        Never gonna give you up <br>
+        Never gonna let you down <br>
+        Never gonna run around and desert you <br>
+        Never gonna make you cry <br>
+        Never gonna say goodbye <br>
+        Never gonna tell a lie and hurt you <br><br>
+        <img src="never-gonna.gif"> <br>
+        <br><br></p>
+    </div>
+
+    <script>
+        let stars = document.getElementById('stars')
+        let moon = document.getElementById('moon')
+        let mountains_behind = document.getElementById('mountains_behind')
+        let text = document.getElementById('text')
+        let btn = document.getElementById('btn')
+        let mountains_front = document.getElementById('mountains_front')
+        let header = document.querySelector('header');
+
+        window.addEventListener('scroll', function(){
+          let value =  window.scrollY;
+          stars.style.left = value * 0.25 + 'px';
+          moon.style.top = value * 1.05 + 'px';
+          mountains_behind.style.top = value * 0.5 + 'px';
+          mountains_front.style.top = value * 0 + 'px';
+          text.style.marginRight = value * 4 + 'px';
+          text.style.marginTop = value * 1.5 + 'px';
+          btn.style.marginTop = value * 1.5 + 'px';
+          header.style.top = value * 0.5 + 'px';
+        })
+    </script>
+</body>
+</html>
